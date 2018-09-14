@@ -9,6 +9,8 @@ ID....: w0411909
 
 _AUTHOR_ = "Student Name <w0411909@nscc.ca>"
 
+import math
+
 def main():
     # input 
     length = 20
@@ -21,6 +23,7 @@ def main():
     sqft = wall1 + wall2
     # sqft2 = 2 * height ( length + width )
     gallons = sqft / 150 
+    gallons = math.ceil(gallons)
 
     # output
     displayGallons = str(gallons)
