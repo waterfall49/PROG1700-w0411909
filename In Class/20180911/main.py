@@ -21,7 +21,7 @@ def main():
     wall1 = int(length) * int(height) * 2
     wall2 = int(width) * int(height) * 2
     sqft = wall1 + wall2
-    # sqft2 = 2 * height ( length + width )
+    # sqft = 2 * height ( length + width )
     gallons = sqft / 150 
     gallons = math.ceil(gallons)
 
