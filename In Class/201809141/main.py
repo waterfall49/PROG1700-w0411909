@@ -13,7 +13,7 @@ def main():
 
     # input
     cups = input("How many cups of coffee would you like to order: ")
-    print("You ordered "+str(cups)+" of coffee")
+    print("You ordered "+cups+" of coffee")
 
     # process
     preprice = 1.25 * int(cups)
