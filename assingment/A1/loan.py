@@ -19,11 +19,11 @@ def main():
     # process
     i = rate / 5200
     m = (1+i)**(-52*year)
-    monthlypayment = i / (1-m) * loan
+    weeklypayment = i / (1-m) * loan
     
     # output    
-    monthlypayment = "Your monthly payment will be ${:.2f}".format(monthlypayment)
-    print(monthlypayment)
+    weeklypayment = "Your weekly payment will be ${:.2f}".format(weeklypayment)
+    print(weeklypayment)
 
 if __name__ == "__main__":
     main()    
