@@ -21,8 +21,8 @@ def main():
     totalounce = (35840 * tons) + (224 * stone) + (16 * pound) + ounce
     totalkilos = totalounce / 35.274
     metrictons = int(totalkilos/1000)
-    kilos = totalkilos % 1000
-    grams = (totalounce % 35.274) / 35.274
+    kilos = int(totalkilos % 1000)
+    grams = (totalounce % 35.274) / 35.274 * 1000
     
     # output    
     display ="The metric weight is {0} tons, {1} kilos, and {2:.1f} grams". format(tons,kilos,grams) 
