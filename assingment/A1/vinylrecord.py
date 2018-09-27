@@ -12,12 +12,9 @@ _AUTHOR_ = "Cathy _ HYEJUNG BAE <w0411909@nscc.ca>"
 def main():
 
     # input
-    name1 = input("Enter the customer's name:")
-    distance = input("Enter the distance in kilometers for delivery:")
-    cost = input("Enter the cost of records purchased:")
-    name1 = str(name1)
-    distance = float(distance)
-    cost = float(cost)
+    name1 = str(input("Enter the customer's name:"))
+    distance = float(input("Enter the distance in kilometers for delivery:"))
+    cost = float(input("Enter the cost of records purchased:"))
 
     # process
     rateperkilo = 15
