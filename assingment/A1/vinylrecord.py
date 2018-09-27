@@ -12,7 +12,8 @@ _AUTHOR_ = "Cathy _ HYEJUNG BAE <w0411909@nscc.ca>"
 def main():
 
     # input
-    name = input("Enter the customer's name:")
+    print("Enter the customer's name:")
+    name = input()
     distance = float(input("Enter the distance in kilometers for delivery:"))
     cost = float(input("Enter the cost of records purchased:"))
 
@@ -34,4 +35,4 @@ def main():
     print(totalcost)
 
 if __name__ == "__main__":
-    main()    
+    main()
