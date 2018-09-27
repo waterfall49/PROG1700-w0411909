@@ -12,7 +12,7 @@ _AUTHOR_ = "Cathy _ HYEJUNG BAE <w0411909@nscc.ca>"
 def main():
 
     # input
-    name1 = str(input("Enter the customer's name:"))
+    name = input("Enter the customer's name:",end='')
     distance = float(input("Enter the distance in kilometers for delivery:"))
     cost = float(input("Enter the cost of records purchased:"))
 
@@ -24,7 +24,7 @@ def main():
     totalcost = deliverycost + purchsecost
     
     # output    
-    purchasesummary = "Purchase summary for "+str(name1)+" "
+    purchasesummary = "Purchase summary for "+str(name)+" "
     deliverycost = "Delivery Cost:${:.2f}". format(deliverycost)
     purchsecost = "Purchase Cost:${:.2f}". format(purchsecost)
     totalcost = "Total Cost:${:.2f}". format(totalcost)
