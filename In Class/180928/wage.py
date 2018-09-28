@@ -14,8 +14,11 @@ def main():
     pay = input("Enter your payment per hour($): ")
     hour = float(hour)
     pay = float(pay)
-    if hour > 40 :
-       print("Your luggage exceeds the weight limit(50lbs), $25 surcharge is applied")
+    if hour <= 40 :
+        wage = hour * pay
+        print("Your wage is $"+str(wage)+" ")
+    else :
+        wage1 =  
     print("Have a nice trip")
 
 if __name__ == "__main__":
