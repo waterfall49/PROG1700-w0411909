@@ -25,7 +25,7 @@ def main():
     grams = (totalounce % 35.274) / 35.274 * 1000
     
     # output    
-    display ="The metric weight is {0} tons, {1} kilos, and {2:.1f} grams". format(tons,kilos,grams) 
+    display ="The metric weight is {0} tons, {1} kilos, and {2:.1f} grams". format(metrictons,kilos,grams) 
     print(display)
 
 if __name__ == "__main__":
