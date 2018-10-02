@@ -28,7 +28,7 @@ def main():
         province = province.upper()
         if province == 'AB':
             tax = gst
-        elif province == 'ON' or 'NB' or 'SN':
+        elif province == 'ON' or 'NB' or 'NS':
             tax = gst + 0.1 
         else:
             tax = gst + 0.06
