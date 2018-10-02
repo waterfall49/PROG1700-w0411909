@@ -11,6 +11,8 @@ _AUTHOR_ = "Cathy _ HYEJUNG BAE <w0411909@nscc.ca>"
 
 def main():
 
+    # Hipster' local Vinyl Records - Customer Order Details 
+
     # input
     tons = int(input("Enter the number of tons:"))
     stone = int(input("Enter the number of stone:"))
