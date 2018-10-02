@@ -11,6 +11,11 @@ _AUTHOR_ = "Cathy _ HYEJUNG BAE <w0411909@nscc.ca>"
 
 def main():
 
+    # Delivery is charged at a rate of $15 per kilometer
+    # All purchases are subject to a 14% sales tax
+    # the input is provided, the program will display the customer's name and three calculated costs: 
+      # delivery cost, records cost (plus tax) and total cost
+
     # input
     name = input("Enter the customer's name: ")
     distance = float(input("Enter the distance in kilometers for delivery: "))

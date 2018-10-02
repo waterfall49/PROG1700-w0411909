@@ -11,7 +11,9 @@ _AUTHOR_ = "Cathy _ HYEJUNG BAE <w0411909@nscc.ca>"
 
 def main():
 
-    # Hipster' local Vinyl Records - Customer Order Details 
+    # converts a weight given in tons (imperial), stones, pounds, and ounces 
+    # to the metric equivalent in metric tons, kilograms, and grams
+    # The number of grams should be displayed to one decimal place
 
     # input
     tons = int(input("Enter the number of tons:"))
