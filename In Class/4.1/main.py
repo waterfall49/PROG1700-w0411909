@@ -28,13 +28,13 @@ def main():
         province = province.upper()
         if province == 'AB':
             tax = gst
-        elif province == 'ON' or 'NB' or 'NS':
+        elif province == 'ON' or province == 'NB' or province =='NS':
             tax = gst + 0.1 
         else:
             tax = gst + 0.06
         totalorder = order + (order * tax)     
         tax = tax*100
-        display = "Your tax is {:.1f}%, total amount of order is {}". format(tax,totalorder)
+        display = "Your tax is {0:.1f}%, total amount of order is {1}". format(tax,totalorder)
         print(display)
     else:
         print("You don't need to pay tax! Your total amount of order is "+str(order)+" ")
