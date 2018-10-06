@@ -43,30 +43,31 @@ def main():
         value = 1          
     elif grade == "F":
         value = 0  
-    else :
-        print("You entered an invalid letter grade.")
+    else:
+        value = 0    # Meaningless assingment, to prevent error
+                     # If grade is not A,B,C,D,F / value dosen't need 
 
     modifyingnumber = 0.3
     
     if modifier == "+":
         if grade != "A" and grade != "F":
             totalvalue = value + modifyingnumber
-        else :
+        else:
             totalvalue = value    
     elif modifier == "-":
         if grade != "F":
             totalvalue = value - modifyingnumber
-        else : 
+        else: 
             totalvalue = value
-    else :
+    else:
         totalvalue = value        
 
     # output
-    if grade == "A" or grade == "B" or grade == "D" or grade == "D" or grade == "F":
+    if grade == "A" or grade == "B" or grade == "C" or grade == "D" or grade == "F":
         display = "The numeric value is: {:.1f}". format(totalvalue)
         print(display)         
-    else:    
-
+    else:
+        print("You entered an invalid letter grade.")   
 
 if __name__ == "__main__":
     main()    
