@@ -34,10 +34,10 @@ def main():
             tax = gst + 0.06
         totalorder = order + (order * tax)     
         tax = tax*100
-        display = "Your tax is {0:.1f}%, total amount of order is {1}". format(tax,totalorder)
+        display = "Your tax is {0:.1f}%, total amount of order is ${1:.2f}". format(tax,totalorder)
         print(display)
     else:
-        print("You don't need to pay tax! Your total amount of order is "+str(order)+" ")
+        print("You don't need to pay tax! Your total amount of order is $"+str(order)+" ")
 
 if __name__ == "__main__":
     main()    
