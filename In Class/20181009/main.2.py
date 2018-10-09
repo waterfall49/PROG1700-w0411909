@@ -1,5 +1,9 @@
 
 def sayHi(name,age):
-    sayHi("dean",48)
-    print(f"Hello {name}, you are {age})
+    print(f"Hello {name}, you are {age}" )
+
+sayHi("dean",48)
+  
+
+
 
