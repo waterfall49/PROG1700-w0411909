@@ -22,8 +22,8 @@ def main():
     def multiple(a,b):
         return(a*b)
 
-    def calceil():
-        return(math.ceil())    
+    def calceil(g):
+        return(math.ceil(g))    
 
     wall1 = multiple(length,height)   
     wall2 = multiple(width,height)
