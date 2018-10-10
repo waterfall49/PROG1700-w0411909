@@ -13,9 +13,9 @@ import math
 
 def main():
     # input 
-    length = input("What is the lenght of walls: ")
-    width = input("What is the width of walls: ")
-    height = input("What is the height of walls: ")
+    length = float(input("What is the lenght of walls: "))
+    width = float(input("What is the width of walls: "))
+    height = float(input("What is the height of walls: "))
 
     # process
 
@@ -23,7 +23,7 @@ def main():
         return(a*b)
 
     def calceil():
-        math.ceil()    
+        return(math.ceil())    
 
     wall1 = multiple(length,height)   
     wall2 = multiple(width,height)
