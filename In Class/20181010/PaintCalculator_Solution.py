@@ -37,9 +37,6 @@ def paintcalculator():
 
     squrefeetpergallon = 150    
 
-    #wall1 = multiple(length,height)   
-    #wall2 = multiple(width,height)
-    #area = area(multiple(length,height),multiple(width,height))
     area = area(multiple(length,height),multiple(width,height))
     gallons = gallons(area,squrefeetpergallon)
     paint = gallonsofpaint(gallons)
