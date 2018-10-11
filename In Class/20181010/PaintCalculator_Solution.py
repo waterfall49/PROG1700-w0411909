@@ -39,6 +39,7 @@ def paintcalculator():
 
     #wall1 = multiple(length,height)   
     #wall2 = multiple(width,height)
+    #area = area(multiple(length,height),multiple(width,height))
     area = area(multiple(length,height),multiple(width,height))
     gallons = gallons(area,squrefeetpergallon)
     paint = gallonsofpaint(gallons)
@@ -53,9 +54,9 @@ def paintcalculator():
     #round number of gallons up to the nearest whole number
     #gallons_of_paint = math.ceil(totalArea / square_feet_per_gallon)
 
-#OUTPUT - Display number of gallons needed
-#print("\nThe total wall area of your room is " + str(totalArea) + " square feet.")
-#print("You will need " + str(gallons_of_paint) + " gallon(s) of paint. \n\nHappy Painting!")
+    #OUTPUT - Display number of gallons needed
+    #print("\nThe total wall area of your room is " + str(totalArea) + " square feet.")
+    #print("You will need " + str(gallons_of_paint) + " gallon(s) of paint. \n\nHappy Painting!")
 
 
 paintcalculator()
