@@ -32,6 +32,7 @@ def landscapecalculator():
     elif typeofgrass == "campus":
         cost = 0.01
     else:
+        cost = 0
         print("Enter the correct type of grass again :(")
 
     grasscost = multiple(multiple(length,width),cost)
