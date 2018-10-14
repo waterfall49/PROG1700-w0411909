@@ -1,11 +1,6 @@
 
 def mobiledataplan():
 
-    # Up to and including 200Mb : $20.00 flat rate 
-    # Over 200Mb and up to and including 500Mb : $0.105 per Mb 
-    # Over 500Mb and up to and including 1Gb : $0.110 per Mb 
-    # Over 1Gb : $118.00 flat rate 
-
     # input
     data = float(input("Enter data usage (Mb): "))
 
@@ -19,10 +14,16 @@ def mobiledataplan():
     def subtract(f,g):
         return(f-g)
 
+    # Up to and including 200Mb : $20.00 flat rate
     low_flatrate = 20
+    # Over 1Gb : $118.00 flat rate
     high_flatrate = 118
+    # Over 200Mb and up to and including 500Mb : $0.105 per Mb 
     rateperMB1 = 0.105
+    # Over 500Mb and up to and including 1Gb : $0.110 per Mb
     rateperMB2 = 0.110
+
+    # datarange is divided 2 section
     data1=subtract(data,200) 
     data2=subtract(500,200)
     data3=subtract(data,500)  

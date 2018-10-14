@@ -1,12 +1,6 @@
 
 def landscapecalculator():
 
-    # There is a base labour charge of $1000
-    # If the surface (length * width) is over 5000 square feet, add $500
-    # The cost is calculated per square foot
-    # If the grass is “fescue” the cost is $0.05; for “bentgrass” it is $0.02; “campus” is $0.01
-    # Each tree requested has a $100 charge
-
     # input
     housenumber = input("Enter House Number: ")
     length = float(input("Enter property depth (feet): "))
@@ -25,6 +19,7 @@ def landscapecalculator():
     def add(c,d,e):
         return(c+d+e)    
 
+    # If the grass is “fescue” the cost is $0.05; for “bentgrass” it is $0.02; “campus” is $0.01    
     if typeofgrass == "fescue":
         cost = 0.05
     elif typeofgrass == "bentgrass":
@@ -37,12 +32,16 @@ def landscapecalculator():
 
     grasscost = multiple(multiple(length,width),cost)
 
+    # If the surface (length * width) is over 5000 square feet, add $500
     if multiple(length,width) > 5000:
         grasscost = grasscost + addionalfee
     else:
         grasscost = grasscost
 
+    # Each tree requested has a $100 charge
     treecost = multiple(numberoftree,ratepertree)
+
+    # totalcost = labourcharge + grasscost + treecost
     totalcost = add(labourcharge,grasscost,treecost)
 
     # output    
