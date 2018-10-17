@@ -23,9 +23,9 @@ def GradeAverageCalculator():
     i=0
 
     for s in subjects:
-        print("Please enter a letter grade for " +s)
-        letterGrade = input("").upper()
-        modifier = input("Please enter a modifier (+, - or nothing) : \n")
+        #print("Please enter a letter grade for " +s)
+        letterGrade = input("Please enter a letter grade for" +s+": ").upper()
+        modifier = input("Please enter a modifier (+, - or nothing) : ")
 
         if letterGrade == "A":
             numericGrade = 4.0
@@ -48,7 +48,6 @@ def GradeAverageCalculator():
         elif modifier == "-":
             if letterGrade != "F":     # Minus is not valid on F
                 numericGrade -= 0.3
-
 
         if i == 0:
             numericGrade0 = numericGrade
@@ -76,7 +75,7 @@ def GradeAverageCalculator():
     print("The numeric value for" +s+ "is: {0:.1f}". format(numericGrade5))
 
     average = (numericGrade0+numericGrade1+numericGrade2+numericGrade3+numericGrade4+numericGrade5) / 6
-    print("\nYour grade point average for the  semester is: {0:.1f}". format(average))
+    print(f"\nYour grade point average for the semester is {average:.1f}")
 
 
 GradeAverageCalculator()
