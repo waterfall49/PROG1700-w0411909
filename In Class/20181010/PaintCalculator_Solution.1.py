@@ -16,18 +16,15 @@ def paintcalculator():
 
     #INPUT
     #Get Dimensions of the room
-    length = float(input("Enter the length of the room, in feet: "))
+    length = float(input("\nEnter the length of the room, in feet: "))
     width = float(input("Enter the width of the room, in feet: "))
     height = float(input("Enter the height of the room, in feet: "))
 
     #PROCESSING
     #Calculate the area of the walls
 
-    def multiple(a,b):
-        return(a*b)
-
-    def area(c,d):
-        return((c+d)*2)
+    def totalarea(a,b,c):   # a,b is length and width, C should be a height
+        return((a*c*2) + (b*c*2))
 
     def gallons(f,g):
         return(f/g)    
@@ -35,9 +32,9 @@ def paintcalculator():
     def gallonsofpaint(h):
         return(math.ceil(h))
 
-    squrefeetpergallon = 150    
+    squrefeetpergallon = 150   
 
-    area = area(multiple(length,height),multiple(width,height))
+    area = totalarea(length,width,height)
     gallons = gallons(area,squrefeetpergallon)
     paint = gallonsofpaint(gallons)
 
