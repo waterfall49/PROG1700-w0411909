@@ -13,18 +13,16 @@ def LoanCalculator():
 
     Interestpay = float(Loan) * Interestfloat
 
+    def InterestCalculator(N_Days):
+        e = N_Days-1
+        Interestpay = float(Loan) * Interestfloat * ((1+Interestfloat)**e)
+        print(f"{i} - $  {Interestpay:.2f}"  )
+        return(Interestpay)
+
     i=1
     while i<=NumberOfDays:
-        if i==1:
-            print(f"{i} - $  {Interestpay:.2f}"  )
-        elif i==2:
-            Interestdaily = Interestpay * Interestfloat
-            Interestpay = Interestpay + Interestdaily
-            print(f"{i} - $  {Interestpay:.2f}"  )
-        else:
-            Interestdaily = Interestpay * Interestfloat
-            Interestpay = Interestpay + Interestdaily
-            print(f"{i} - $  {Interestpay:.2f}"  )
+        InterestCalculator(i)
+        
         i = i+1
 
     print("Total Owing ")
