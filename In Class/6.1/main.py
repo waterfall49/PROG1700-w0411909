@@ -11,18 +11,22 @@ def LoanCalculator():
     Interestfloat = InterestRate * 0.01
     NumberOfDays = int(input("Enter number of days until it is due(days): "))
 
-    interestpay = Interestfloat * Loan
+    Interestpay = Interestfloat * float(Loan)
 
     i=1
-    while (i<=NumberOfDays): 
-        if i=1:
+    while i<=NumberOfDays:
+        if i==1:
             print(f"{i} - $  {Interestpay:.2f}"  )
-        elif i=2:
-            interestdaily = Interestpay * Interestfloat
-            print(f"{i} - $  {interestdaily:.2f}"  )
+        elif i==2:
+            Interestdaily = Interestpay * Interestfloat
+            Interestpay = Interestpay + Interestdaily
+            print(f"{i} - $  {Interestpay:.2f}"  )
         else:
-            interestdaily = Interestdaily * Interestfloat
-            print(f"{i} - $  {interestdaily:.2f}"  )
+            Interestdaily = Interestpay * Interestfloat
+            Interestpay = Interestpay + Interestdaily
+            print(f"{i} - $  {Interestpay:.2f}"  )
         i = i+1
+
+    print("Total Owing ")
 
 LoanCalculator()
