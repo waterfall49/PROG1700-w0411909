@@ -20,7 +20,7 @@ def LoanCalculator():
 
     Interestpay = float(Loan) * Interestfloat
 
-    def Inter(days):
+    def InterestCalculator(days):
         additionalpay = Interestpay * Interestfloat
         Interestpay = Interestpay + additionalpay
         return(days,Interestpay)     
