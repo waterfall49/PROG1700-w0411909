@@ -15,10 +15,10 @@ def LoanCalculator():
 
     Interestpay = float(Loan) * Interestfloat  # Interestpay 
 
-    def InterestCalculator(days):        # Function to calculate accumulate interestpay
+    def InterestCalculator(D_days):        # Function to calculate accumulate interestpay
         additionalpay = Interestpay * Interestfloat
         I_Interestpay = Interestpay + additionalpay
-        return(days,I_Interestpay)     
+        return(D_days,I_Interestpay)     
 
     i=1
     while i<=NumberOfDays:
