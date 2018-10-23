@@ -11,9 +11,15 @@ def main():
         addcountry = input("What country should you add in the list? ")
         addcountry.lower()
     else :
-        countries.append(addcountry)
-        for c in countries:
-            print(c)
+        answer = input("Do you want to add it in the list(yes or no)? ")
+        answer.lower()
+        if answer == "yes":
+            countries.append(addcountry)
+            for c in countries:
+                print(c)
+        else:
+            for c in countries:
+                print(c) 
 
     def UpperCase(a):
         return(a.upper())
