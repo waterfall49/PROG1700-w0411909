@@ -7,7 +7,7 @@ def main():
     addcountry.lower()
 
     while addcountry in countries : 
-        print("That country is the list already")
+        print("That country is in the list already")
         addcountry = input("What country should you add in the list? ")
         addcountry.lower()
     else :
