@@ -12,7 +12,7 @@ def main():
         addcountry.lower()
     else :
         answer = input("Do you want to add it in the list(yes or no)? ")
-        answer.lower()
+        answer = answer.lower()
         if answer == "yes":
             countries.append(addcountry)
             for c in countries:
