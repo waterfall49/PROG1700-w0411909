@@ -9,9 +9,8 @@ def main():
     #     print(counter)
     #     counter = counter + 1 
 
-    c = 1
     for c, h in enumerate(hours) : 
         print(h)
-        print(c+1)    
+        print(c)    
 
 main()
