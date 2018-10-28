@@ -10,7 +10,6 @@ def main():
     #     counter = counter + 1 
 
     for c, h in enumerate(hours) : 
-        print(h)
-        print(c)    
+        print(c+1,h)    
 
 main()
