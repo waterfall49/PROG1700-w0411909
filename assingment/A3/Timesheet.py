@@ -13,7 +13,7 @@ def main():
     print("------------------------------------------------------------")    
 
     # max day and hours 
-    print(f"The most hours worked was on:")
+    print("The most hours worked was on:")
     max_hour = max(day_hours)
     for c, h in enumerate(day_hours) : 
         if h == max_hour : 
@@ -31,5 +31,5 @@ def main():
     for c, h in enumerate(day_hours) : 
         if h < 7 :
             print(f"Day #{c+1}: {h} hours")
-
+    
 main()
