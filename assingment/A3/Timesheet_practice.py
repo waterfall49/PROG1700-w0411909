@@ -13,11 +13,18 @@ def main():
     print("------------------------------------------------------------")    
 
     # max day and hours 
-    print(f"The most hours worked was on:")
+
     max_hour = max(day_hours)
-    for c, h in enumerate(day_hours) : 
-        if h == max_hour : 
-            print(f"Day #{c+1} when you worked {h} hours.") 
+    max_day = day_hours.index(max_hour)
+    print(f"The most hours worked was on:")
+    print(f"Day #{max_day+1} when you worked {max_hour} hours.")  
+    count_max_days = day_hours.count(max_hour)  
+    if count_max_days >= 2 :
+        n = 2
+        while n <= count_max_days : 
+            max_day = day_hours.index(max_hour,max_day+1)
+            print(f"Day #{max_day+1} when you worked {max_hour} hours.")    
+            n = n + 1
     print("------------------------------------------------------------")  
 
     # total hours and average
@@ -27,6 +34,7 @@ def main():
     print("------------------------------------------------------------")  
 
     # slacked off 
+
     print("Days you slaced off (i.e) worked less than 7 hours) : ")
     for c, h in enumerate(day_hours) : 
         if h < 7 :
