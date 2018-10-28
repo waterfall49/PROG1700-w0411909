@@ -1,32 +1,30 @@
 
 def main():
 
-    def input_letter(a):
+    # Define function of redaction 
+    def input_letter(P_Phrase):
         list_letter = []
-        letter = input("Type a comma-seperated list of letters to redact: ")
-        list_letter.append(letter)
-        #num for elem in list_letter for num in elem
-        for c, l in enumerate(list_letter) :
-            print(c,l)
-            total_num = 0 
-            num_letters = a.count(l)
-            total_num = total_num + num_letters 
-        print(num_letters)
-
-    phrase = input("Type a phrase (or quit to exit program): ")
-    input_letter(phrase)    
-
+        letter = input("\nType a comma-seperated list of letters to redact: ")
+        list_letter.extend(letter)
         
+        total_num = 0 
+        for c, l in enumerate(list_letter) :
+            num_letters = P_Phrase.count(l)
+            total_num = total_num + num_letters # To calculate number of letters redacted
+            P_Phrase = P_Phrase.replace(l, '_') # Replace redacted letter to "_" 
 
-    # input
-    # while
-    #     phrase = input("Type a phrase (or quit to exit program): ")
-            
+        print(f"Number of letters redacted : {total_num}" )
+        print(f"Redacted phrase : {P_Phrase} \n")
 
-
-    # process
- 
-
-    # output    
+    # loop 
+    i = 0
+    while i == 0 : 
+        phrase = input("Type a phrase (or quit to exit program): ")
+        phrase = phrase.lower()
+        if not phrase == "quit" :
+            input_letter(phrase)    
+        else : 
+            print("The End")
+            i = i + 1
 
 main()
