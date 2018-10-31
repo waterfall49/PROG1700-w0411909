@@ -6,8 +6,11 @@ def Time_sheet():
     i=1
     while i <= 5 :
         hours = int(input(f"Enter hours worked on Day #{i}: "))
-        day_hours.append(hours)   
-        i = i + 1
+        if hours > 24 :
+            print("Try again. Enter valid hours(less than 24)")
+        else : 
+            day_hours.append(hours)   
+            i = i + 1
     print("------------------------------------------------------------")    
 
     # max day and hours 
@@ -19,8 +22,12 @@ def Time_sheet():
     print("------------------------------------------------------------")  
 
     # total hours and average
-    total_hour = sum(day_hours)
-    average_hour = total_hour / len(day_hours)
+    def a_average(a):
+        t_hour = sum(a)
+        a_hour = t_hour / len(a)
+        return(a_hour,t_hour)
+
+    average_hour, total_hour = a_average(day_hours)
     print(f"The total number of hours worked was : {total_hour} ")
     print(f"The average number of hours worked each day was : {average_hour} ")
     print("------------------------------------------------------------")  
