@@ -24,9 +24,9 @@ def Cookie_Selloff():
     for n, b in zip(list_name,list_box) : # n is name, b is number of boxes 
         if b == max(list_box) : 
             print(f"{n}" + " "*(10-(len(n))) + "- Trip to Girl Guide Jamboree in Aruba!")  
-        elif b >= average and b < max(list_box) : 
+        elif b > average and b < max(list_box) : 
             print(f"{n}" + " "*(10-(len(n))) + "- Super Seller Budge")  
-        elif b >= 1 and b < average : 
+        elif b >= 1 and b <= average : 
             print(f"{n}" + " "*(10-(len(n))) + "- Left over cookies")  
         else : 
             print(f"{n}" + " "*(10-(len(n))) + "-")  
