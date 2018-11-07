@@ -13,7 +13,7 @@ print(inp_obj.read(2))
 
 for line_str in inp_obj:
     out_obj.write(line_str)
-print(inp_obj.read())
+#print(out_obj.read())
 #a = inp_obj.seek(1)
 #print(a)
 
