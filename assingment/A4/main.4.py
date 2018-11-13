@@ -1,4 +1,4 @@
 
-objFile = open("atem_Original.txt")
+objFile = open("ateam_Original.txt")
 strContent = objFile.read()
 print(strContent)
