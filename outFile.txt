@@ -1,10 +1,10 @@
-Length(1) : IN 1972 A CRACK COMMANDO UNIT WAS SENT TO PRISON 
-Length(2) : BY A MILITARY COURT FOR A CRIME THEY DIDN'T COMMIT
-Length(3) : THESE MEN PROMPTLY ESCAPED FROM A MAXIMUM SECURITY STOCKADE
-Length(4) : TO THE LOS ANGELES UNDERGROUND. 
-Length(5) : TODAY STILL WANTED BY THE GOVERNMENT THEY SURVIVE AS SOLDIERS OF FORTUNE. 
-Length(6) : IF YOU HAVE A PROBLEM
-Length(7) : IF NO ONE ELSE CAN HELP
-Length(8) : AND IF YOU CAN FIND THEM
-Length(9) : MAYBE YOU CAN HIRE...
-Length(10) : THE A-TEAM.
+1: In 1972 a crack commando unit was sent to prison 
+2: by a military court for a crime they didn't commit
+3: These men promptly escaped from a maximum security stockade
+4: to the Los Angeles underground. 
+5: Today still wanted by the government they survive as soldiers of fortune. 
+6: If you have a problem
+7: If no one else can help
+8: And if you can find them
+9: Maybe you can hire...
+10: The A-Team.
