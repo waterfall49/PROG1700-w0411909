@@ -37,7 +37,7 @@ def main():
         CaseChanged_list.append(ChangeLine)
 
     import random
-    randomNum = random.randint(1,line_number-1)
+    randomNum = random.randint(1,line_number)
     c = 1 
     for o_line in CaseChanged_list :
         if c == randomNum : 
