@@ -1,12 +1,12 @@
 
 def main(): 
 
-    print("The Itsy Bitsy Aardvark")
+    print("The Itsy Bitsy Aardvark\n")
     
-    mystr = "this that and the other"
-    mywords = mystr.split(' ')
-    print(mywords)
-
+    inFile = open("the_choices_file.csv")
+    inFile = inFile.readlines()
+    a = inFile[2]
+    print(a)
 
 if __name__ == "__main__":
     main()    
