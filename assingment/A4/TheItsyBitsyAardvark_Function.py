@@ -9,27 +9,37 @@ def dict_word(F_File):
         D_Lines[W_Type] = W_Choice
     return(D_Lines)    
 
-def ListofChoices(D_Lines): 
-    L_Choices = []
-    for C_Choice in D_Lines :
-        print(f"\nPlease choose {C_Choice}:")
-        i = 1
-        for W_Words in D_Lines[C_Choice] :
-            print(f"{i}) {W_Words}")
-            i += 1
-        User_Choice = int(input("Enter Choice(1-5): "))
-        W_Choice = D_Lines[C_Choice]
-        Choices = W_Choice[User_Choice-1]
-        L_Choices.append(Choices)
-        return(L_Choices)
-
 def main(): 
 
     print("The Itsy Bitsy Aardvark\n")
     
     objFile = open("the_choices_file.csv")
     dictLines = dict_word(objFile)
-    List_Choices = ListofChoices(dictLines)
+
+    List_Choices = []
+
+    for choice in dictLines :
+        print(f"\nPlease choose {choice}:")
+        i = 1
+        for words in dictLines[choice] :
+            print(f"{i}) {words}")
+            i += 1
+
+        a = 1
+        while a == 1:
+            User_Choice = input("Enter Choice(1-5): ")
+            if not User_Choice.isnumeric():
+                print("Try again. Enter number!")
+            elif int(User_Choice) < 1 or int(User_Choice) > 5:
+                print("Try to enter the number between 1-5!")
+            else: 
+                User_Choice = int(User_Choice)
+                a += 1
+
+        WordChoice = dictLines[choice]
+        Choices = WordChoice[User_Choice-1]
+        Choices = Choices.upper()
+        List_Choices.append(Choices)
 
     storyFile = open("the_story_file.txt")
 
@@ -44,7 +54,6 @@ def main():
         print(storyFileMsg)
 
     objFile.close()        
-
 
 if __name__ == "__main__":
     main()    
