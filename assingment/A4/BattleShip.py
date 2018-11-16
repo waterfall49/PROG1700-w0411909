@@ -1,23 +1,40 @@
 
 def main():
 
+    line = (" "*3)
+    for i in range(65,75):
+        line += chr(i) 
+        line += " "
+        line = line
+    print(line)
+
+    Null_Array = [ [ " " for i in range(0,10) ] for j in range(0,10) ]
+
+    i = 1
+    for row in Null_Array:
+        # row = row.replace("\n","")
+        print(f"{i:2d} {row}")
+        i += 1 
+
+    # i = 1
+    # for row in Null_Array:
+    #     row = row.replace("\n","")
+    #     print(f"{i:2d} {row}")
+    #     i += 1
+
+    # for r in range(1,11):
+    #     print(f"{r:2d}")
+    
+
     objFile = open("map.txt")
 
-    # print(objFile.read())
-
-    # table = [ [ 0 for i in range(6) ] for j in range(6) ]
-
-    row_list = []
-    # column_list = []
+    Array = []
     for row in objFile:
         row = row.replace("\n","")
-        row_list.append(row)
-        # c_list = row.split(",")
-        # c_list = int(c_list)
-        # column_list.append(c_list)
+        row_list = row.split(",")
+        Array.append(row_list)
 
-    # print(column_list)
-    print(row_list)
+    objFile.close()
 
 if __name__ == "__main__":
     main()    
