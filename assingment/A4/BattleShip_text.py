@@ -42,25 +42,21 @@ def main():
         while a == 1 :   # to validate input value
             answer = input("\nChoose your target(Ex. A1): ")
             answer = answer.upper()
-            if answer == "" or answer[0] == " " or answer[1:] == " " : # Validate for space or enter key
-                print("Invalid! Try again")
-            elif answer[0].isnumeric():   # First character should be letter
-                print("Invalid! Try again")
-            elif ord(answer[0]) < 65 or ord(answer[0]) > 74 : # If first character is letter, it should be from A to J
-                print("Invalid! Try again")
-            # elif not answer[1:].isnumeric() : # Second character should be integer.
-            #     print("Invalid! Try again")
-            elif int(answer[1:]) > 10 : # Second integer character should between 1 to 10
+            if answer == "" or answer[0] == " " or answer[1:] == " " :
                 print("Invalid! Try again")
             else : 
-                X = int(answer[1:])-1   # If first and second character is right, arrange them to new variable
-                Y = ord(answer[0])-65
-                if scoreGrid[X][Y] == "O" or scoreGrid[X][Y] == "X" : # If I hit same point, should try again! 
+                X = int(answer[1:])-1   # Change Second charater to be same with index number
+                Y = ord(answer[0])-65   # Change first charater to ASCII number, make same with index 
+                if X < 0 or X > 9 :    # Second integer character should be between o and 9
+                    print("Invalid! Try again")
+                elif Y < 0 or Y > 9 :    # If first character should be from A to J
+                    print("Invalid! Try again")
+                elif scoreGrid[X][Y] == "O" or scoreGrid[X][Y] == "X" : # If I hit same point, should try again! 
                     print("You already shot this! Try again!")
                 else :
                     a = 2
 
-        if Array[X][Y] == "0":
+        if Array[X][Y] == "0":  
             scoreGrid[X][Y] = "O"  # If I hit non-ship location, save the value with "O" in scoreGrid
             s_num = 0
             print("Miss")
@@ -77,8 +73,8 @@ def main():
             print("You had 17 of 17hits, which sank all the ship")
             print("You won, congraturation!")
             break
-        elif success_num < 17 and try_num == 1 :
-            print("You have 0 missiles remaining")  # If you hit 30times, shows end message 
+        elif success_num < 17 and try_num == 1 :   # If you hit 30times, shows end message 
+            print("You have 0 missiles remaining") 
             print("GAME OVER")
             print(f"You had {success_num} of 17 hits, but didn't sink all the ship")
             print("Better luck next time.")
