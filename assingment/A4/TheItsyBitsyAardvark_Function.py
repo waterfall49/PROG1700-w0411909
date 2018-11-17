@@ -1,5 +1,5 @@
 
-def dict_word(F_File):     
+def dict_word(F_File):    # Define function making file to dictionary list
     D_Lines = {}
     for L_line in F_File : 
         L_line = L_line.replace("\n","")
@@ -13,12 +13,12 @@ def main():
 
     print("The Itsy Bitsy Aardvark\n")
     
-    objFile = open("the_choices_file.csv")
-    dictLines = dict_word(objFile)
+    objFile = open("the_choices_file.csv") 
+    dictLines = dict_word(objFile)   # Call the making file to dictionary list
 
     List_Choices = []
 
-    for choice in dictLines :
+    for choice in dictLines :   # Print for every name and words in dictionary list 
         print(f"\nPlease choose {choice}:")
         i = 1
         for words in dictLines[choice] :
@@ -27,8 +27,8 @@ def main():
 
         a = 1
         while a == 1:
-            User_Choice = input("Enter Choice(1-5): ")
-            if not User_Choice.isnumeric():
+            User_Choice = input("Enter Choice(1-5): ")  # Input for every question
+            if not User_Choice.isnumeric():   # Validate for input
                 print("Try again. Enter number!")
             elif int(User_Choice) < 1 or int(User_Choice) > 5:
                 print("Try to enter the number between 1-5!")
