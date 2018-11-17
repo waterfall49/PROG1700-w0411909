@@ -50,7 +50,7 @@ def main():
                 print("Invalid! Try again")
             # elif not answer[1:].isnumeric() : # Second character should be integer.
             #     print("Invalid! Try again")
-            elif int(answer[1:]) > 10 : # Second integer character should between 1 to 10
+            elif int(answer[1:]) < 0 or int(answer[1:]) > 10 : # Second integer character should between 1 to 10
                 print("Invalid! Try again")
             else : 
                 X = int(answer[1:])-1   # If first and second character is right, arrange them to new variable
