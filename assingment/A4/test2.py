@@ -10,3 +10,7 @@ print(a)
 
 b = chr(128548)    
 print(b)
+
+list1 = [1, 2, 3]
+str1 = ' '.join(str(e) for e in list1)
+print(str1)

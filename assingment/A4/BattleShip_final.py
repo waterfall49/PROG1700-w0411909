@@ -11,14 +11,14 @@ def Input_Validatoin(Entry_Array):  # Define function to validate input value
     a = 1
     while a == 1 :   # to validate input value
         answer = input("\nChoose your target(Ex. A1): ")
-        answer = answer.upper()
+        answer = answer.upper()   # not case sensitive 
         if answer == "" or answer[0] == " " or answer[1:] == " " : # Validate for space or enter key
             print("Invalid! Try again")
-        elif ord(answer[0]) < 65 or ord(answer[0]) > 74 : # If first character is letter, it should be from A to J
-            print("Invalid! Try again")
+        elif ord(answer[0]) < 65 or ord(answer[0]) > 74 : # First character should be from A to J
+            print("Invalid! Try again")  # If it is integer, it has defferent ASCII code, so it can be checked. 
         elif not answer[1:].isnumeric() : # Second character should be integer.
             print("Invalid! Try again")
-        elif int(answer[1:]) < 1 or int(answer[1:]) > 10 : # Second integer character should between 1 to 10
+        elif int(answer[1:]) < 1 or int(answer[1:]) > 10 : # Second integer character should be between 1 to 10
             print("Invalid! Try again")
         else : 
             X_Row = int(answer[1:])-1   # If first and second character is right, arrange them to new variable
@@ -32,11 +32,10 @@ def Input_Validatoin(Entry_Array):  # Define function to validate input value
 def main():
 
     objFile = open("map.txt")   
-
     Array = Make_Array(objFile)  # Call the funcation and return the value
     objFile.close()
 
-    print("Let's play Battleship!")
+    print("Let's play Battleship!") 
 
     scoreGrid = [ [chr(32) for i in range(0,10)] for j in range(0,10) ]  # Make a blank 2d-array matrix 
     success_num = 0  # succecc number (hit number)
@@ -53,31 +52,20 @@ def main():
 
         i = 1
         for rows in scoreGrid:   # to arrange for printing 2d array 
-            L_letter = ""
-            for letter in rows:
-                if letter == "," or letter == "[" or letter == "]" :
-                    letter = ""
-                else : 
-                    letter = letter
-                L_letter += str(letter)
-                L_letter += " "
-            print(f"{i:2d} {L_letter}")
-            i += 1 
+            letter = ' '.join(str(e) for e in rows)  # change array to string for printing
+            print(f"{i:2d} {letter}")
+            i += 1
 
         X, Y = Input_Validatoin(scoreGrid) # Call the function to validate input and assign return value as new variables
 
         if Array[X][Y] == "0":
             scoreGrid[X][Y] = "O"  # If I hit non-ship location, save the value with "O" in scoreGrid
-            s_num = 0
             print("Miss")
         else : 
             scoreGrid[X][Y] = "X"  # If I hit ship location, save the value with "X" in scoreGrid
-            s_num = 1 
             print("HIT!!!")
-        
-        scoreGrid = scoreGrid  # scoreGrid is accumulated 
+            success_num += 1   # for counting success number 
 
-        success_num += s_num   # for counting success number 
         if success_num == 17 and try_num >= 1 :   # If success number is 17, shows success message, end of game 
             print("YOU SANK MY ENTIRE FLEET!")
             print("You had 17 of 17hits, which sank all the ship")
