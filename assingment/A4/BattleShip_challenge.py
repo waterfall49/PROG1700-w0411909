@@ -30,6 +30,17 @@ def Input_Validatoin(Entry_Array):  # Define function to validate input value
     return(X_Row,Y_Column)
 
 def main():
+    # BS1 = [[0,3,1],[0,4,1],[0,5,1]]
+    # BS2 = [[1,8,1],[2,8,1],[3,8,1],[4,8,1]]
+    # BS3 = [[4,3,1],[5,3,1]]
+    # BS4 = [[7,6,1],[7,7,1],[7,8,1]]
+    # BS5 = [[8,0,1],[8,1,1],[8,2,1],[8,3,1],[8,4,1]]
+
+    BS1 = [[0,3],[0,4],[0,5]]
+    BS2 = [[1,8],[2,8],[3,8],[4,8]]
+    BS3 = [[4,3],[5,3]]
+    BS4 = [[7,6],[7,7],[7,8]]
+    BS5 = [[8,0],[8,1],[8,2],[8,3],[8,4]]
 
     objFile = open("map.txt")   
     Array = Make_Array(objFile)  # Call the funcation and return the value
@@ -59,6 +70,7 @@ def main():
             print(f"{i:2d} {L_letter}")
             i += 1 
 
+
         X, Y = Input_Validatoin(scoreGrid) # Call the function to validate input and assign return value as new variables
 
         if Array[X][Y] == "0":
@@ -68,6 +80,10 @@ def main():
             scoreGrid[X][Y] = "X"  # If I hit ship location, save the value with "X" in scoreGrid
             print("HIT!!!")
             success_num += 1   # for counting success number 
+
+        answerlist_matrix = []
+        answerlist_matrix.append([X,Y])
+        print(answerlist_matrix)
 
         if success_num == 17 and try_num >= 1 :   # If success number is 17, shows success message, end of game 
             print("YOU SANK MY ENTIRE FLEET!")
