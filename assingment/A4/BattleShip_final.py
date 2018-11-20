@@ -52,9 +52,12 @@ def main():
 
         i = 1
         for rows in scoreGrid:   # to arrange for printing 2d array 
-            letter = ' '.join(str(e) for e in rows)  # change array to string for printing
-            print(f"{i:2d} {letter}")
-            i += 1
+            L_letter = ""
+            for letter in rows:
+                L_letter += str(letter)
+                L_letter += " "
+            print(f"{i:2d} {L_letter}")
+            i += 1 
 
         X, Y = Input_Validatoin(scoreGrid) # Call the function to validate input and assign return value as new variables
 
