@@ -50,6 +50,7 @@ def main():
 
     scoreGrid = [ [chr(32) for i in range(0,10)] for j in range(0,10) ]  # Make a blank 2d-array matrix 
     success_num = 0  # success number (hit number)
+    answerlist_matrix = [] # for finding each battleship
 
     for try_num in range(30,0,-1):   # 30 times opportunity
         print(f"You have {try_num} missiles to fire to sink all five ships\n")
@@ -81,7 +82,7 @@ def main():
             print("HIT!!!")
             success_num += 1   # for counting success number 
 
-        answerlist_matrix = []
+        
         answerlist_matrix.append([X,Y])
         print(answerlist_matrix)
 
