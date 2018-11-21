@@ -1,5 +1,5 @@
 
-def Make_Array(File):  # Define function to convert to File to 2d-array matrix
+def Make_Array(File):  # Define function to convert File to 2d-array matrix
     A_Array = []
     for row in File:   
         row = row.replace("\n","")
