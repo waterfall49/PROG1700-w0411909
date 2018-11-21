@@ -30,10 +30,7 @@ def Input_Validatoin(Entry_Array):  # Define function to validate input value
     return(X_Row,Y_Column)
 
 def main():
-
-    BS = ((0, 3), (0, 4), (0, 5)), ((1, 8), (2, 8), (3, 8), (4, 8)), ((4, 3), (5, 3)), ((7, 6), (7, 7), (7, 8)),((8, 0), (8, 1), (8, 2), (8, 3), (8, 4))
-
-
+    
     objFile = open("map.txt")   
     Array = Make_Array(objFile)  # Call the funcation and return the value
     objFile.close()
@@ -43,6 +40,8 @@ def main():
     scoreGrid = [ [chr(32) for i in range(0,10)] for j in range(0,10) ]  # Make a blank 2d-array matrix 
     success_num = 0  # success number (hit number)
     answerlist_matrix = [] # for finding each battleship
+    # below line : ship location (for challenge)
+    BS = ((0, 3), (0, 4), (0, 5)), ((1, 8), (2, 8), (3, 8), (4, 8)), ((4, 3), (5, 3)), ((7, 6), (7, 7), (7, 8)),((8, 0), (8, 1), (8, 2), (8, 3), (8, 4))
 
     for try_num in range(30,0,-1):   # 30 times opportunity
         print(f"You have {try_num} missiles to fire to sink all five ships\n")
@@ -73,10 +72,10 @@ def main():
             print("HIT!!!")
             success_num += 1   # for counting success number 
 
-        answerlist_matrix.append((X,Y))
+        answerlist_matrix.append((X,Y))  # make a list for finding ship location
 
         for a in range(0,5):
-            if set(BS[a]) <= set(answerlist_matrix) : 
+            if set(BS[a]) <= set(answerlist_matrix) :  # If we hit any of ship perfectly, it shows message
                 print(f"You bombed Battle ship {a+1} !!!")
 
         if success_num == 17 and try_num >= 1 :   # If success number is 17, shows success message, end of game 
