@@ -1,4 +1,5 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe"
+    "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
+    "pyqt-integration.qtdesigner.path": "C:\\Users\\water\\AppData\\Local\\Programs\\Python\\Python37-32\\Lib\\site-packages\\pyqt5_tools\\designer.exe"
 }
