@@ -25,8 +25,8 @@ def main():
 
     Numbered_list = []
     line_number = 1
-    for line in objFile :   # Read each line in objFile
-        numbered_line = strMSG(line,line_number) # call the function to make a number of line, assign new varible for returning
+    for line in objFile :   # Read each line in objFile 
+        numbered_line = strMSG(line,line_number) # call the function to make a number of line, assign new varible for returning 
         numbered_line = numbered_line.replace("\n","") # Replace \n with "" 
         Numbered_list.append(numbered_line) # Append numbered_line to Numbered_list 
         line_number += 1
