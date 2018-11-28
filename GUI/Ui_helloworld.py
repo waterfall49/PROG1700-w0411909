@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\water\AppData\Local\Programs\Python\Python37-32\Scripts\helloworld.ui'
+# Form implementation generated from reading ui file 'c:\BHJ\NSCC\PROG1700-w0411909\GUI\helloworld.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButtonHello = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButtonHello.setGeometry(QtCore.QRect(70, 140, 191, 81))
+        self.pushButtonHello.setGeometry(QtCore.QRect(120, 140, 191, 81))
         font = QtGui.QFont()
         font.setPointSize(16)
         font.setBold(True)
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.lineEditMessage.setObjectName("lineEditMessage")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 510, 34))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 510, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
