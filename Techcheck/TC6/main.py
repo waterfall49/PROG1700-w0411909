@@ -48,12 +48,6 @@ def main():
                         print(f"Current hit points: {answer_point}")
             print("That was sad. And brief. At least the elf feels better about himself!!")
 
-                    
-
-
-
-
-
 
 if __name__ == "__main__":
     main()    
