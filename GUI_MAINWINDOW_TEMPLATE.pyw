@@ -3,11 +3,11 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 
 #ADD IMPORT STATEMENT FOR YOUR GENERATED UI.PY FILE HERE
-import Ui_CountriesOfTheWorld
+import Ui_ChangeMe
 #      ^^^^^^^^^^^ Change this!
 
 #CHANGE THE SECOND PARAMETER (Ui_ChangeMe) TO MATCH YOUR GENERATED UI.PY FILE
-class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
+class MyForm(QMainWindow, Ui_ChangeMe.Ui_MainWindow):
 #                         ^^^^^^^^^^^   Change this!
 
     # DO NOT MODIFY THIS CODE
