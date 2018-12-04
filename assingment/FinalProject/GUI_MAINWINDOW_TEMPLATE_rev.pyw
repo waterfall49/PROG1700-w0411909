@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5.QtGui import Qpixmap 
 
 #ADD IMPORT STATEMENT FOR YOUR GENERATED UI.PY FILE HERE
 import Ui_CountriesOfTheWorld
@@ -17,6 +18,20 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
     # END DO NOT MODIFY
 
         # ADD SLOTS HERE, indented to this level (ie. inside def __init__)
+        self.label_Countryname.hide()
+        self.label_Population.hide()
+        self.label_area_output.hide()
+        self.label_density_output.hide()
+        self.label_Flag.hide()
+        self.label_percent.hide()
+        self.label_percent_output.hide()
+        self.pushButton_update.hide()
+        self.label_Area.hide()
+        self.textEdit_Population.hide()
+        self.comboBox_squremeter.hide()
+        self.groupBox.hide()
+        self.radioButton_km.hide()
+        self.radioButton_sm.hide()
         self.actionLoad_Countries.triggered.connect(self.countrybutton_clicked)
 
     # ADD SLOT FUNCTIONS HERE
@@ -41,17 +56,15 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
 
         objFile = open('countries.txt')
         
-        dictLines = {}
         for line in objFile : 
             line = line.replace("\n","")
-            listLineContent = line.split(",")
-            CountryName = listLineContent[0]
-            CountryDetail = listLineContent[1:]
-            dictLines[CountryName] = CountryDetail
+            listLine = line.split(",")
+            self.listWidget_countrylist.addItem(listLine[0]) 
+        
+        objFile.close()
 
-        for country in dictLines : 
-            self.listWidget_countrylist.addItem(country) 
-
+    imagePixmap = Qpixmap("GUI/Flags/Albania.png")
+    self.label_Countryname.setPixmap(imagePixmap)
         
 #Example Helper Function
 #    def Save(self):

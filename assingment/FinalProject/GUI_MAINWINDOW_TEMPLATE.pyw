@@ -19,6 +19,7 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
     # END DO NOT MODIFY
 
         # ADD SLOTS HERE, indented to this level (ie. inside def __init__)
+        
         self.QAction.actionLoad_Countries.clicked.connect(self.hellobutton_clicked)
 
     # ADD SLOT FUNCTIONS HERE
