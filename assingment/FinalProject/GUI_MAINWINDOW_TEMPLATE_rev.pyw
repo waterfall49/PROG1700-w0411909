@@ -14,17 +14,17 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
     def __init__(self, parent=None):
         super(MyForm, self).__init__(parent)
         self.setupUi(self)
-
-        
     # END DO NOT MODIFY
 
         # ADD SLOTS HERE, indented to this level (ie. inside def __init__)
-        self.QAct
-        ion.actionLoad_Countries.clicked.connect(self.hellobutton_clicked)
+        self.actionLoad_Countries.triggered.connect(self.countrybutton_clicked)
 
     # ADD SLOT FUNCTIONS HERE
     # These are the functions your slots will point to
     # Indent to this level (ie. inside the class, at same level as def __init__)
+    def countrybutton_clicked(self):
+        # Call the SetMessage() function
+        self.LoadCountriesFromFile()
 
 #Example Slot Function
 #   def SaveButton_Clicked(self):
@@ -35,6 +35,24 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
     # contain the custom code that you'll write to make your progam work.
     # Indent to this level (ie. inside the class, at same level as def __init__)
 
+    #     # Set Hello message in line edit box
+
+    def LoadCountriesFromFile(self):
+
+        objFile = open('countries.txt')
+        
+        dictLines = {}
+        for line in objFile : 
+            line = line.replace("\n","")
+            listLineContent = line.split(",")
+            CountryName = listLineContent[0]
+            CountryDetail = listLineContent[1:]
+            dictLines[CountryName] = CountryDetail
+
+        for country in dictLines : 
+            self.listWidget_countrylist.addItem(country) 
+
+        
 #Example Helper Function
 #    def Save(self):
 #       Implement the save functionality here

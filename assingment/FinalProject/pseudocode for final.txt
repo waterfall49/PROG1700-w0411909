@@ -1,0 +1,16 @@
+File > when Load countries clicked
+  - open countries.txt file 
+  - list countries name in Qwidgetbox 
+  - When country clicked, 
+     - Flag, population and area will be displayed 
+     - population is could be changed and saved
+      : if population is changed, total area and percentage should be changed. 
+     - Total area is displayed square meter or square mile
+     - Total area is displayed square meter or square mile
+     - Percentage of world population is displayed
+
+File > when save file clicked.
+  - all changes are saved in countries.txt file
+
+File > exit clicked 
+ - end program
