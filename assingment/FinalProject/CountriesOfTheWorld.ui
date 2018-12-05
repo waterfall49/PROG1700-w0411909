@@ -53,7 +53,7 @@
      <string>Choose a Countries from the list:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Countryname">
+   <widget class="QLabel" name="label_CountryName">
     <property name="geometry">
      <rect>
       <x>431</x>
@@ -71,7 +71,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Country Name</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_Population">
@@ -285,7 +285,7 @@ p, li { white-space: pre-wrap; }
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Flag">
+   <widget class="QLabel" name="label_CountryFlag">
     <property name="geometry">
      <rect>
       <x>570</x>

@@ -55,12 +55,10 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
     def LoadCountriesFromFile(self):
 
         objFile = open('countries.txt')
-        
         for line in objFile : 
             line = line.replace("\n","")
             listLine = line.split(",")
             self.listWidget_countrylist.addItem(listLine[0]) 
-        
         objFile.close()
 
     imagePixmap = Qpixmap("GUI/Flags/Albania.png")
