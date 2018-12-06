@@ -28,13 +28,13 @@ class MyForm(QMainWindow, Ui_CountriesOfTheWorld.Ui_MainWindow):
     def CountrySelected(self,selectedCountryIndex):
         QMessageBox.information(self,"country changed",selectedCountryIndex.text())
         strCountryName = selectedCountryIndex.text()
-        imagePixmap = QPixmap(f"GUI/Flags/{strCountryName}")
+        imagePixmap = QPixmap(f"assignment/FinalProject/Flags/{strCountryName}")
         self.label_CountryName.setText(strCountryName)
         self.label_CountryFlag.setPixmap(imagePixmap)
         self.label_CountryFlag.resize(imagePixmap.width(),imagePixmap.height())
         
     def LoadCountries(self):
-        objFile = open("countries.txt")
+        objFile = open("assingment/FinalProject/countries.txt")
         for line in objFile:
             lineList = line.split(",")
             self.listWidget_countrylist.addItem(lineList[0])
